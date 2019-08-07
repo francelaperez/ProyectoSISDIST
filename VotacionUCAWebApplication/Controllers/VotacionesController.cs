@@ -21,6 +21,11 @@ namespace VotacionUCAWebApplication.Controllers
             return View();
         }
 
+        public ActionResult Visualizar()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Borrar()
         {

@@ -3,9 +3,13 @@
     ViewBag.Title = "Gestion";
 }
 
-<h2>Listado de Votaciones </h2>
-<a href="../Votaciones/Crear" class="btn btn-success m-3">Nueva votación</a>
-<table class="table table-bordered">
+<a href="../Votaciones/Crear" class="btn btn-success m-3 float-right">Nueva votación</a>
+<div class="col-lg-12">
+    <h2 >Listado de Votaciones </h2>
+</div>
+
+
+<table class="table table-borderd">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -22,6 +26,7 @@
             <td>Habilitado</td>
             <td>3</td>
             <td>
+                <a href="../Votaciones/Visualizar/1" class="btn btn-primary"><i class="lni-eye"></i></a>
                 <a href="../Votaciones/Editar/1" class="btn btn-primary"><i class="lni-pencil"></i></a>
                 <a href="#" class="btn btn-danger"><i class="lni-trash"></i></a>
             </td>
@@ -32,6 +37,7 @@
             <td>Deshabilitado</td>
             <td>0</td>
             <td>
+                <a href="../Votaciones/Visualizar/2" class="btn btn-primary"><i class="lni-eye"></i></a>
                 <a href="../Votaciones/Editar/2" class="btn btn-primary"><i class="lni-pencil"></i></a>
                 <a href="#" class="btn btn-danger"><i class="lni-trash"></i></a>
             </td>
