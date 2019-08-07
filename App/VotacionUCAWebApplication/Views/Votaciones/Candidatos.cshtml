@@ -1,27 +1,47 @@
-﻿
+﻿@using VotacionUCAWebApplication.Models
 @{
     ViewBag.Title = "Candidatos";
 }
 
+
 <div class="col-lg-12">
-    <h2 class="page-header">Listado de Candidatos </h2>
+    <h2>Candidatos de Votación - ID: @ViewBag.IdVotacion </h2>
 </div>
 
-<table class="table table-bordered">
+<table class="table table-sm">
     <thead>
         <tr>
             <th scope="col">#</th>
             <th scope="col">Nombre</th>
+            <th scope="col">Número Carnet</th>
+            <th scope="col">Votos Obtenidos</th>
         </tr>
     </thead>
     <tbody>
+        @foreach (var item in (List<Candidatos>)ViewBag.ListaCandidatos)
+        {
         <tr>
-            <th scope="row">1</th>
-            <td></td>
+            <th scope="row">@item.Id</th>
+
+            @foreach (Estudiantes e in (List<Estudiantes>)ViewBag.ListaEstudiantes)
+            {
+                if (item.IdEstudiante == e.Id)
+                {
+                    <text>
+                        <td>
+                            @e.NombreCompleto
+                        </td>
+                        <td>
+                            @e.NumCarnet
+                        </td>
+                    </text>
+                    break;
+                }
+            }
+
+            <td>@item.VotosObtenidos</td>
+            
         </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td></td>
-        </tr>
+        }
     </tbody>
 </table>

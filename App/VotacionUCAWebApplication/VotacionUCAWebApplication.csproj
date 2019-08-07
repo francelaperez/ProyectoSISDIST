@@ -27,6 +27,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -149,8 +150,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Candidatos.cs" />
     <Compile Include="Models\ClienteWeb.cs" />
     <Compile Include="Models\Estudiantes.cs" />
+    <Compile Include="Models\Votaciones.cs" />
     <Compile Include="Models\Votos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -163,6 +166,7 @@
     <Content Include="Content\css\responsive.css" />
     <Content Include="Content\css\slicknav.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\img\logo-psd.png" />
     <Content Include="Content\img\Logo-vot.jpg" />
     <Content Include="Content\img\logo-W.jpg" />
     <Content Include="Content\js\bootstrap.min.js" />
