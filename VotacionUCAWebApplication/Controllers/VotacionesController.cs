@@ -21,19 +21,16 @@ namespace VotacionUCAWebApplication.Controllers
             return View();
         }
 
-        public ActionResult Visualizar()
-        {
-            return View();
-        }
-
         [HttpPost]
         public ActionResult Borrar()
         {
             return View();
         }
 
-        public ActionResult Candidatos()
+        public ActionResult Candidatos(int id)
         {
+            Content("Funciona");
+            System.Diagnostics.Debug.WriteLine("ID DE VOTACION> " + id);
             return View();
         }
 

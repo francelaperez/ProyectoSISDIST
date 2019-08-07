@@ -13,6 +13,14 @@ namespace VotacionUCAWebApplication
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //routes.MapRoute("Visualizar", "{controller=Votaciones}/{id?}/{action=Candidatos}");
+
+            routes.MapRoute(
+                "Candidatos",
+                "Votaciones/{id}/Candidatos",
+                new { controller = "Votaciones", action = "Candidatos" }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
