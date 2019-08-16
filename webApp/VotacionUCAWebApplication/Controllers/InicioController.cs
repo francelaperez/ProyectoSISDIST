@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Web.Mvc;
-using VotacionUCAWebApplication.Models;
+﻿using System.Web.Mvc;
 
 namespace VotacionUCAWebApplication.Controllers
 {
@@ -12,14 +8,10 @@ namespace VotacionUCAWebApplication.Controllers
         {
             return View();
         }
-
-        public async Task<ActionResult> Gestion()
+        public ActionResult Gestion()
         {
-            List<Votaciones> votaciones = await ClienteWeb.ListarVotaciones();
-            ViewBag.ListaVotaciones = votaciones;
             return View();
         }
-
         public ActionResult Votaciones()
         {
             return View();

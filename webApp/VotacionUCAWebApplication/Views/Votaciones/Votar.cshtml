@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Votar";
+}
+
+<div class="col-lg-12">
+    <h2 id="nombreEleccion"></h2>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-10 col-md-15 col-xs-13 thead menu-bg">
+        <div class="login-form login-area">
+                <section class="section-padding">
+                    <div class="container">
+                        <div class="col-12 text-center">
+                            <div class="heading">
+                                <h6 class="section-title">¿Por quien deseas votar?</h6>
+                            </div>
+                        </div>
+                        <div class="row col-12 justify-content-center" id="datosTablaCandidatos">
+
+
+                            
+                        </div>
+                    </div>
+                </section>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+<script>
+        $(document).ready(function () {
+            NombreVotacionActual();
+            CandidatosVotacionDisponibles();
+        });
+
+        
+</script>
+}

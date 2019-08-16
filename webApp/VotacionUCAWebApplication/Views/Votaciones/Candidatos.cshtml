@@ -1,47 +1,43 @@
-﻿@using VotacionUCAWebApplication.Models
+﻿
 @{
     ViewBag.Title = "Candidatos";
 }
 
-
 <div class="col-lg-12">
-    <h2>Candidatos de Votación - ID: @ViewBag.IdVotacion </h2>
+    <h2>Candidatos de Votación</h2>
 </div>
 
-<table class="table table-sm">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Número Carnet</th>
-            <th scope="col">Votos Obtenidos</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in (List<Candidatos>)ViewBag.ListaCandidatos)
-        {
-        <tr>
-            <th scope="row">@item.Id</th>
 
-            @foreach (Estudiantes e in (List<Estudiantes>)ViewBag.ListaEstudiantes)
-            {
-                if (item.IdEstudiante == e.Id)
-                {
-                    <text>
-                        <td>
-                            @e.NombreCompleto
-                        </td>
-                        <td>
-                            @e.NumCarnet
-                        </td>
-                    </text>
-                    break;
-                }
-            }
+<div class="row justify-content-center">
+    <div class="col-lg-10 col-md-15 col-xs-13 thead menu-bg">
+        <div class="login-form login-area">
+                <div class="form-group">
+                    <table class="table">
+                        <thead class="thead bg-blue">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Votos Obtenidos</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaCandidatosVotacion">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            <a href="/Inicio/Gestion" class="btn btn-danger m-3 float-right">Regresar</a>
+        </div>
+    </div>
+</div>
 
-            <td>@item.VotosObtenidos</td>
-            
-        </tr>
-        }
-    </tbody>
-</table>
+<div class="toggler">
+    <h4>  </h4>
+</div>
+
+@section scripts{
+<script>
+        $(document).ready(function () {
+            ListarCandidatosVotacion();
+        });
+</script>
+    }

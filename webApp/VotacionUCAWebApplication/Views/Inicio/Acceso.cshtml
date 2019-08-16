@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Acceso</title>
 
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/img/favicon.ico"/>
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/css/line-icons.css" rel="stylesheet" />
     <link href="~/Content/css/slicknav.css" rel="stylesheet" />
@@ -17,6 +18,7 @@
     <link href="~/Content/css/owl.carousel.css" rel="stylesheet" />
     <link href="~/Content/css/main.css" rel="stylesheet" />
     <link href="~/Content/css/responsive.css" rel="stylesheet" />
+    <link href="~/Content/css/sweetalert2.min.css" rel="stylesheet" />
     <link href="~/Content/css/style.css" rel="stylesheet" />
 
 </head>
@@ -29,13 +31,11 @@
                         <div class="text-center">
                             <img src="~/Content/img/Logo-vot.jpg" />
                         </div>
-                        
-
-                        <form role="form" class="login-form">
+                        <div class="login-form">
                             <div class="form-group">
                                 <div class="input-icon">
                                     <i class="lni-user"></i>
-                                    <input type="text" id="Usuario" class="form-control" name="email" placeholder="Usuario">
+                                    <input type="text" id="Usuario" class="form-control" placeholder="Usuario">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -46,18 +46,30 @@
                             </div>
                             <div class="form-group mb-3">
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="TipoEstudiante">
-                                    <label class="custom-control-label" for="TipoEstudiante">Soy Estudiante</label>
+                                    <input type="checkbox" class="custom-control-input" id="TipoUsuario">
+                                    <label class="custom-control-label" for="TipoUsuario">Soy Estudiante</label>
                                 </div>
                             </div>
                             <div class="text-center">
-                                <a href="../Inicio/Gestion" class="btn btn-common log-btn">Ingresar</a>
+                                <button id="btnIngresar" class="btn btn-common log-btn">Ingresar</button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <script src="/Content/js/jquery-min.js"></script>
+    <script src="~/Content/js/sweetalert2.min.js"></script>
+    <script src="~/Content/js/script.js"></script>
+
+    <script>
+            $('#btnIngresar').click(function () {
+                Acceso();
+            });
+    </script>
+
 </body>
 </html>

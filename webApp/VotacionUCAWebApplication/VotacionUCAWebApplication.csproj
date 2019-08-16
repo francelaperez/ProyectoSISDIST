@@ -145,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AjaxController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Controllers\VotacionesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -153,6 +154,7 @@
     <Compile Include="Models\Candidatos.cs" />
     <Compile Include="Models\ClienteWeb.cs" />
     <Compile Include="Models\Estudiantes.cs" />
+    <Compile Include="Models\Usuarios.cs" />
     <Compile Include="Models\Votaciones.cs" />
     <Compile Include="Models\Votos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -166,15 +168,18 @@
     <Content Include="Content\css\responsive.css" />
     <Content Include="Content\css\slicknav.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\sweetalert2.min.css" />
+    <Content Include="Content\img\favicon.ico" />
     <Content Include="Content\img\logo-psd.png" />
     <Content Include="Content\img\Logo-vot.jpg" />
-    <Content Include="Content\img\logo-W.jpg" />
+    <Content Include="Content\img\Logo-vot.png" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\jquery-min.js" />
     <Content Include="Content\js\jquery.slicknav.js" />
     <Content Include="Content\js\main.js" />
     <Content Include="Content\js\owl.carousel.min.js" />
     <Content Include="Content\js\script.js" />
+    <Content Include="Content\js\sweetalert2.min.js" />
     <Content Include="Content\js\wow.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -214,7 +219,10 @@
     <Content Include="Content\css\LineIcons0ad2.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Votaciones\Visualizar.cshtml" />
+    <Content Include="Views\Votaciones\Votar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Votaciones\Resultados.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
